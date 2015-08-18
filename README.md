@@ -148,6 +148,38 @@ var id:String = hashids.encode(1234567);
 	
 	b332db5
 	
+#### Encoding hexadecimal numbers
+
+Here we are encoding hexadecimal number passed as string (without 0x at the beginning): "fa2b8e964c1d3570"
+
+```actionscript
+
+import org.hashids.Hashids;
+
+var hashids:Hashids = new Hashids("this is my salt");
+
+var id:String = hashids.encodeHex("fa2b8e964c1d3570");
+```
+
+`id` is now going to be:
+	
+	bOv8ROn6O6crr6
+	
+#### Decoding
+
+```actionscript
+
+import org.hashids.Hashids;
+
+var hashids:Hashids = new Hashids("this is my salt");
+
+var hex:String = hashids.decodeHex("bOv8ROn6O6crr6");
+```
+
+`hex` is now going to be:
+	
+	fa2b8e964c1d3570
+	
 Randomness
 -------
 
