@@ -89,10 +89,10 @@ package org.hashids
 		}
 		
 		/**
-		 * Encrypt numbers to string
+		 * Encode numbers to string
 		 *
-		 * @param numbers the numbers to encrypt
-		 * @return the encrypt string
+		 * @param numbers Numbers to encode
+		 * @return Encoded string
 		 */
 		public function encode(...numbers):String
 		{
@@ -112,10 +112,10 @@ package org.hashids
 		}
 		
 		/**
-		 * Decrypt string to numbers
+		 * Decode string to numbers
 		 *
-		 * @param hash the encrypt string
-		 * @return decryped numbers
+		 * @param hash Encoded string
+		 * @return Decoded numbers
 		 */
 		public function decode(hash:String):Vector.<Number>
 		{
@@ -126,10 +126,10 @@ package org.hashids
 		}
 		
 		/**
-		 * Encrypt hexa to string
+		 * Encode hexadecimal number to string
 		 *
-		 * @param hexa the hexa to encrypt
-		 * @return the encrypt string
+		 * @param hexa Hexadecimal number to encode
+		 * @return Encoded string
 		 */
 		public function encodeHex(hexa:String):String
 		{
@@ -146,10 +146,10 @@ package org.hashids
 		}
 		
 		/**
-		 * Decrypt string to numbers
+		 * Decode string to numbers
 		 *
-		 * @param hash the encrypt string
-		 * @return decryped numbers
+		 * @param hash Encoded string
+		 * @return Decoded numbers
 		 */
 		public function decodeHex(hash:String):String
 		{
@@ -162,6 +162,7 @@ package org.hashids
 			return result;
 		}
 		
+		/* Private methods */
 		private function _encode(numbers:Vector.<Number>):String
 		{
 			var numberHashInt:int = 0;
@@ -265,7 +266,6 @@ package org.hashids
 			return ret;
 		}
 		
-		/* Private methods */
 		private function consistentShuffle(alphabet:String, salt:String):String
 		{
 			if(salt.length <= 0)
