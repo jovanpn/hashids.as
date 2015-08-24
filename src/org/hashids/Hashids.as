@@ -2,6 +2,8 @@ package org.hashids
 {
 	public class Hashids
 	{
+		public static const version:String = "1.0.0";
+		
 		private static const DEFAULT_ALPHABET:String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		
 		private var salt:String = "";
